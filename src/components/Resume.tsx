@@ -33,7 +33,7 @@ const Resume = () => {
           <div>
             <h5 className="my-2 text-xl font-bold">Software Engineer</h5>
             <p className="font-semibold">Dhella(2024 - Present)</p>
-            <p className="my-3">Currently working the lead Front End Engineer</p>
+            <p className="my-3">Currently working as the lead Front-End Engineer</p>
           </div>
         </div>
       </motion.div>
