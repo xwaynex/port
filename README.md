@@ -14,6 +14,7 @@ Welcome to my portfolio project—a modern, responsive website built with Next.j
 
 The project is organized as follows:
 
+```bash
 src
 ├── animations.ts
 ├── app
@@ -33,7 +34,7 @@ src
 ├── data.ts
 ├── pages
 └── type.ts
-
+```
 
 **Note:** All images and assets are located in the `public/assets` directory.
 
@@ -42,13 +43,16 @@ src
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/xwaynex/port.git```
+   git clone https://github.com/xwaynex/port.git
+   ```
 
 2. **Navigate to the Project Directory**
 
-  ```bash
-  cd port ```
+```bash
+  cd port
+```
 
 3. **Install Dependencies**
-  ```bash
-  npm install```
+```bash
+  npm install
+```
