@@ -137,4 +137,26 @@ export const projects: iProject[] = [
     categoty: ["next", "typescript",],
     key_tech: ["React", "Tailwind", "Framer motion"],
   },
+  {
+    id: 3,
+    name: "Crypto Exchange",
+    description: 
+    "An inprogress Crypto exchange temp, auth: (usr: kami, pwd:As@1234)",
+    image_path: "/images/Exchange.png",
+    deployed_url: "https://osaka6.netlify.app/",
+    github_url: "https://github.com/xwaynex",
+    categoty: ["react", "mongo", "express",],
+    key_tech: ["React", "Tailwind", "express", "mongo", "MUI"],
+  },
+  {
+    id: 4,
+    name: "3D AI",
+    description: 
+    "A 3D landing page with interact 3D elements and contact form",
+    image_path: "/images/Ai.png",
+    deployed_url: "https://reliable-meerkat-afc827.netlify.app/",
+    github_url: "https://github.com/xwaynex/businessWeb.git",
+    categoty: ["react"],
+    key_tech: ["React", "Tailwind", "Framer motion", " Three Fiber", "Three.js "],
+  },
 ]
