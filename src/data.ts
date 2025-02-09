@@ -130,10 +130,10 @@ export const projects: iProject[] = [
     id: 2,
     name: "Portfolio",
     description: 
-    "An open sourced porfolio website",
+    "An open source porfolio website",
     image_path: "/images/Portfolio.png",
-    deployed_url: "https://",
-    github_url: "https://github",
+    deployed_url: "https://portfolio-nine-beta-74.vercel.app/",
+    github_url: "https://github.com/xwaynex/port.git",
     categoty: ["next", "typescript",],
     key_tech: ["React", "Tailwind", "Framer motion"],
   },
