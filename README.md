@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Welcome to my portfolio project—a modern, responsive website built with Next.js, TypeScript, and Framer Motion. This project showcases my skills as a Full-Stack Developer and Product Manager, featuring smooth animations, modular components, and a clean, minimalist design.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Responsive Design:** Optimized for various screen sizes.
+- **Smooth Animations:** Leveraging Framer Motion for engaging transitions.
+- **Modular Components:** Clean and reusable code structure.
+- **Dynamic Content:** Easily manage and update projects, services, and personal information.
+- **Optimized Performance:** Efficient code and asset management for a fast, reliable experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project is organized as follows:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+src
+├── animations.ts
+├── app
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components
+│   ├── About.tsx
+│   ├── Bar.tsx
+│   ├── Navbar.tsx
+│   ├── ProjectCard.tsx
+│   ├── ProjectNavbar.tsx
+│   ├── Projects.tsx
+│   ├── Resume.tsx
+│   ├── ServiceCard.tsx
+│   └── Sidebar.tsx
+├── data.ts
+├── pages
+└── type.ts
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+**Note:** All images and assets are located in the `public/assets` directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the Repository**
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/xwaynex/port.git```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Navigate to the Project Directory**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  ```bash
+  cd port ```
+
+3. **Install Dependencies**
+  ```bash
+  npm install```

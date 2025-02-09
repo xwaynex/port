@@ -1,0 +1,140 @@
+import { RiComputerLine } from "react-icons/ri";
+import { iProject, iService, iSkill } from "./type";
+import { FaServer } from "react-icons/fa";
+import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
+import { MdDeveloperMode } from "react-icons/md";
+import { BsCCircleFill } from "react-icons/bs";
+
+
+export const service: iService[] = [
+  {
+    Icon: RiComputerLine, 
+    title: "Frontend Development",
+    about:
+      " dynamic, responsive, and intuitive user interfaces using modern JavaScript frameworks.",
+  },
+  {
+    Icon: FaServer, 
+    title: "Backend Development",
+    about:
+      "<b>Robust </b>, <b>scalable</b> backend systems that power high-performance applications and ensuring secure data management.",
+  },
+  {
+    Icon: AiOutlineApi, 
+    title: "API Development",
+    about:
+      "Design and develop secure, efficient, and <b>well-documented</b> APIs that enable seamless integration between various systems.",
+  },
+  {
+    Icon: MdDeveloperMode, 
+    title: "Competitive Coding",
+    about:
+      "Thrive on the challenge of competitive coding—constantly refining my problem-solving skills, on <b>leetcode</b>, <b>hackerrank</b>...",
+  },
+  {
+    Icon: AiOutlineAntDesign, 
+    title: "Product Management",
+    about:
+      "Merging technical expertise with strategic vision, Guiding products from concept to launch. I ensure that every solution not only meets market demands.",
+  }
+];
+
+
+export const languages: iSkill[] = [
+  {
+    Icon: BsCCircleFill,
+    name: "Java Script",
+    level: "90%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Type Script",
+    level: "80%",
+  },
+
+  {
+    Icon: BsCCircleFill,
+    name: "Rust",
+    level: "50%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Solidity",
+    level: "50%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "React",
+    level: "80%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "React Native",
+    level: "70%",
+  },
+ 
+  {
+    Icon: BsCCircleFill,
+    name: "Next Js",
+    level: "70%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Express",
+    level: "70%",
+  },
+]
+
+export const tools: iSkill[] = [
+  {
+    Icon: BsCCircleFill,
+    name: "Aws",
+    level: "60%"
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Docker",
+    level: "70%"
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Kubarneries",
+    level: "70%"
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "MongoDb",
+    level: "60%"
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Mysql",
+    level: "60%"
+  }
+
+]
+
+export const projects: iProject[] = [
+  {
+    id: 1,
+    name: "Dhella",
+    description: 
+    "A secondary health care managment app",
+    image_path: "/images/Dhella.png",
+    deployed_url: "https://app.dhella.com/",
+    github_url: "https://github.com/xwaynex",
+    categoty: ["react"],
+    key_tech: ["React", "Material UI", "Bootstrap", "Tailwind"],
+  },
+  {
+    id: 2,
+    name: "Portfolio",
+    description: 
+    "An open sourced porfolio website",
+    image_path: "/images/Portfolio.png",
+    deployed_url: "https://",
+    github_url: "https://github",
+    categoty: ["next", "typescript",],
+    key_tech: ["React", "Tailwind", "Framer motion"],
+  },
+]
