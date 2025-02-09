@@ -141,7 +141,7 @@ export const projects: iProject[] = [
     id: 3,
     name: "Crypto Exchange",
     description: 
-    "An inprogress Crypto exchange temp, auth: (usr: kami, pwd:As@1234)",
+    "An inprogress Crypto exchange, auth: (usr: kami, pwd:As@12345)",
     image_path: "/images/Exchange.png",
     deployed_url: "https://osaka6.netlify.app/",
     github_url: "https://github.com/xwaynex",
