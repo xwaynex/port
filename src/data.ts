@@ -119,22 +119,22 @@ export const projects: iProject[] = [
     id: 1,
     name: "Dhella",
     description: 
-    "A secondary health care managment app",
+    "A secondary health care management app",
     image_path: "/images/Dhella.png",
     deployed_url: "https://app.dhella.com/",
     github_url: "https://github.com/xwaynex",
-    categoty: ["react"],
+    category: ["react"],
     key_tech: ["React", "Material UI", "Bootstrap", "Tailwind"],
   },
   {
     id: 2,
     name: "Portfolio",
     description: 
-    "An open source porfolio website",
+    "An open source portfolio website",
     image_path: "/images/Portfolio.png",
     deployed_url: "https://portfolio-nine-beta-74.vercel.app/",
     github_url: "https://github.com/xwaynex/port.git",
-    categoty: ["next", "typescript",],
+    category: ["next", "typescript",],
     key_tech: ["React", "Tailwind", "Framer motion"],
   },
   {
@@ -145,7 +145,7 @@ export const projects: iProject[] = [
     image_path: "/images/Exchange.png",
     deployed_url: "https://osaka6.netlify.app/",
     github_url: "https://github.com/xwaynex",
-    categoty: ["react", "mongo", "express",],
+    category: ["react", "mongo", "express",],
     key_tech: ["React", "Tailwind", "express", "mongo", "MUI"],
   },
   {
@@ -156,7 +156,18 @@ export const projects: iProject[] = [
     image_path: "/images/Ai.png",
     deployed_url: "https://reliable-meerkat-afc827.netlify.app/",
     github_url: "https://github.com/xwaynex/businessWeb.git",
-    categoty: ["react"],
+    category: ["react"],
     key_tech: ["React", "Tailwind", "Framer motion", " Three Fiber", "Three.js "],
+  },
+  {
+    id: 5,
+    name: "Expense Tracker",
+    description: 
+    "A fully functional expense tracking tool, keep daily tabs on how much you spend",
+    image_path: "/images/expense.png",
+    deployed_url: "https://expense-tracker-ve1i.onrender.com/",
+    github_url: "https://github.com/xwaynex/expense-tracker",
+    category: ["react", "express", "mongo"],
+    key_tech: ["React", "Graphql", "Tailwind", "Apollo Client", "Apollo Server"],
   },
 ]

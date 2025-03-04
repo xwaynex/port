@@ -19,7 +19,7 @@ const Projects = () => {
       return;
     }
     const newArray = projectsData.filter((projects) =>
-      projects.categoty.includes(category)
+      projects.category.includes(category)
     );
     setProjects(newArray);
     setActive(category);
