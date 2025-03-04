@@ -170,4 +170,15 @@ export const projects: iProject[] = [
     category: ["react", "express", "mongo"],
     key_tech: ["React", "Graphql", "Tailwind", "Apollo Client", "Apollo Server"],
   },
+  {
+    id: 6,
+    name: "X Clone",
+    description: 
+    "Playing around with the new X interface and features",
+    image_path: "/images/x.png",
+    deployed_url: "https://x-clone-three-tau.vercel.app/",
+    github_url: "https://github.com/xwaynex/x-clone",
+    category: ["typescript", "next"],
+    key_tech: ["Tailwind", "Firebase", "Emoji-mart", "Cloudinary",],
+  },
 ]
