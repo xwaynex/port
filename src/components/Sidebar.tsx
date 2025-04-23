@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { GiTie } from "react-icons/gi";
 import { FaLinkedin } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineEngineering } from "react-icons/md";
 import { useTheme } from "next-themes";
 
 const Sidebar = () => {
@@ -27,10 +28,12 @@ const Sidebar = () => {
       {/* <h3 className="my-4 text-3xl  font-medium tracking-wider font-title">
         <span className="text-green">Sekai </span>
         itami yo
+        
+        &nbsp; //insert space
       </h3> */}
 
-      <p className="px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full">
-        Software Engineer
+      <p className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full">
+      <MdOutlineEngineering className="h-6 w-6" /> Software Engineer
       </p>
       <a
         href="assets/Resume.pdf"
@@ -59,7 +62,7 @@ const Sidebar = () => {
           <CiLocationOn />
           <span>Earth</span>
         </div>
-        <p className="my-2">victorogunbiyi69@gmail.com</p>
+        {/* <p className="my-2">victorogunbiyi69@gmail.com</p> */}
         <p className="my-2">+234-8161789508</p>
       </div>
       <button
