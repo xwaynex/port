@@ -24,10 +24,10 @@ const Sidebar = () => {
         className="w-32 h-32 mx-auto rounded-full"
         priority // Prioritize for improved LCP
       />
-      <h3 className="my-4 text-3xl  font-medium tracking-wider font-title">
+      {/* <h3 className="my-4 text-3xl  font-medium tracking-wider font-title">
         <span className="text-green">Sekai </span>
         itami yo
-      </h3>
+      </h3> */}
 
       <p className="px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full">
         Software Engineer
