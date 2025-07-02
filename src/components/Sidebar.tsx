@@ -24,6 +24,7 @@ const Sidebar = () => {
         width={150} // Adjust width
         height={150} // Adjust height
         className="w-32 h-32 mx-auto rounded-full"
+        unoptimized //The image fails with a 500 when optimized
         priority // Prioritize for improved LCP
       />
       {/* <h3 className="my-4 text-3xl  font-medium tracking-wider font-title">
