@@ -6,6 +6,7 @@ import { GiTie } from "react-icons/gi";
 import { FaLinkedin } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineEngineering } from "react-icons/md";
+import { RiExternalLinkLine } from "react-icons/ri";
 import { useTheme } from "next-themes";
 
 const Sidebar = () => {
@@ -32,15 +33,15 @@ const Sidebar = () => {
         &nbsp; //insert space
       </h3> */}
 
-      <p className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full">
-      <MdOutlineEngineering className="h-6 w-6" /> Software Engineer
+      <p className="flex items-center justify-center px-14 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full">
+      <MdOutlineEngineering className="h-6 w-6 mr-auto" /> Software Engineer
       </p>
       <a
-        href="assets/Resume.pdf"
-        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full"
-        download="Resume.pdf"
+        href="https://docs.google.com/document/d/1x08uYyvXvnb7nP6n9FNTWLKNfgMbZ_epqkBjwzK39Zg/edit?usp=sharing"
+        className="flex items-center justify-center px-14 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full"
+        target="_blank" rel="noopener noreferrer"
       >
-        <GiTie className="h-6 w-6" /> Download Resume
+        <GiTie className="h-6 w-6 mr-auto"/> View Resume <RiExternalLinkLine className="h-6 w-6" />
       </a>
 
       {/* social Icon */}
