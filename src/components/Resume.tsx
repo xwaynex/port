@@ -31,9 +31,9 @@ const Resume = () => {
         <div>
           <h5 className="my-3 text-2xl font-bold">Experience</h5>
           <div>
-            <h5 className="my-2 text-xl font-bold">Software Engineer</h5>
-            <p className="font-semibold">Dhella(2024 - Present)</p>
-            <p className="my-3">Currently working as the lead Front-End Engineer</p>
+            <h5 className="my-2 text-xl font-bold">FullStack Engineer</h5>
+            <p className="font-semibold">Feelize(2025 - Present)</p>
+            <p className="my-3">Currently developing the business and AI client softwares</p>
           </div>
         </div>
       </motion.div>
