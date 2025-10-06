@@ -28,6 +28,7 @@ const ProjectNavbar: React.FC<{handleFilterCategory:  (category: Category | "all
       <NavItem value="express" {...props} />
       <NavItem value="typescript" {...props} />
       <NavItem value="mongo" {...props} />
+      <NavItem value="ai" {...props} />
     </div>
   );
 };

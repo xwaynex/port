@@ -116,6 +116,17 @@ export const tools: iSkill[] = [
 
 export const projects: iProject[] = [
   {
+    id: 7,
+    name: "adept.ml",
+    description: 
+    "Adept.ml automates your calls, WhatsApp messages, and quoting process, so you can focus on what you do best.",
+    image_path: "/images/adeptML.png",
+    deployed_url: "https://adept.base44.app/",
+    github_url: "https://github.com/xwaynex",
+    category: ["express", "mongo", "ai"],
+    key_tech: ["mongodb", "gemeni", "multer",  ],
+  },
+  {
     id: 1,
     name: "Dhella",
     description: 
