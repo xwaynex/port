@@ -13,7 +13,7 @@ const About = () => {
       className="flex flex-col px-6 pt-1 flex-grow h-full"
     >
       <h5 className="my-3 font-medium">
-      Results-oriented Full-Stack Developer and Product Manager with over four years of experience in enhancing software performance and delivering top-notch solutions. I specialize in crafting efficient, well-documented code architectures that significantly boost application speed, reliability, and scalability.
+      I’ve always seen software as more than lines of code — it’s a system of thought, a reflection of how we reason, create, and solve. As a Full-Stack Developer and emerging Tech Leader with 4+ years of experience, I build and architect systems that not only perform, but think. My passion lies in designing frameworks that scale effortlessly, writing clean, purposeful code, and exploring how AI can reshape the way we develop. Guided by curiosity in philosophy — moral, ethical, and ontological — I bring reflection into engineering: every decision in design and architecture is intentional, every solution tied to meaning. I believe true leadership means staying hands-on — leading through clarity, craftsmanship, and the quiet precision of well-written code.
       </h5>
       <div
         className="p-4 mt-5 bg-gray-400 dark:bg-dark-100 flex-grow h-full"
