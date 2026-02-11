@@ -23,4 +23,4 @@ export interface iProject {
   key_tech: string[]
 }
 
-export type Category = "react" | "express" | "mongo" | "next" | "typescript" | "ai"
+export type Category = "react" | "express" | "mongo" | "next.js" | "typescript" | "ai" | "nestJs"

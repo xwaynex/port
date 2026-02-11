@@ -73,12 +73,17 @@ export const languages: iSkill[] = [
 
   {
     Icon: BsCCircleFill,
-    name: "Next Js",
+    name: "Next.Js",
     level: "70%",
   },
   {
     Icon: BsCCircleFill,
     name: "Express",
+    level: "70%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Nestjs",
     level: "70%",
   },
 ];
@@ -102,12 +107,32 @@ export const tools: iSkill[] = [
   {
     Icon: BsCCircleFill,
     name: "MongoDb",
-    level: "60%",
+    level: "80%",
   },
   {
     Icon: BsCCircleFill,
     name: "Mysql",
     level: "60%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Prisma",
+    level: "70%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Supabase",
+    level: "70%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Firebase",
+    level: "80%",
+  },
+  {
+    Icon: BsCCircleFill,
+    name: "Sentry",
+    level: "80%",
   },
 ];
 
@@ -116,7 +141,7 @@ export const projects: iProject[] = [
     id: 7,
     name: "adept.ml",
     description:
-      "Adept.ml automates your calls, WhatsApp messages, and quoting process, so you can focus on what you do best.",
+    "Adept.ml automates your calls, WhatsApp messages, and quoting process, so you can focus on what you do best.",
     image_path: "/images/adeptML.png",
     deployed_url: "https://adept.ml/",
     github_url: "https://github.com/xwaynex",
@@ -124,7 +149,7 @@ export const projects: iProject[] = [
     key_tech: ["mongodb", "gemeni", "multer"],
   },
   {
-    id: 8,
+    id: 9,
     name: "Feelize",
     description: "AI-enhanced software building",
     image_path: "/images/Feelize.png",
@@ -133,6 +158,17 @@ export const projects: iProject[] = [
     category: ["react", "ai", "express"],
     key_tech: ["Firebase", "Tailwind", "React"],
   },
+  {
+   id: 8,
+   name: "E learn",
+   description:
+     "AI tutor, personalize and learn using 1 on 1 free form AI audio conversation",
+   image_path: "/images/e-learn.png",
+   deployed_url: "https://e-learn-web.vercel.app/",
+   github_url: "https://github.com/xwaynex/e-learn.git",
+   category: [ "ai", "next.js", "typescript", "nestJs"],
+   key_tech: ["NestJs", "Prisma", "Supabase", "Clerk", "Vapi"],
+ },
   {
     id: 1,
     name: "Dhella",
@@ -150,7 +186,7 @@ export const projects: iProject[] = [
     image_path: "/images/Portfolio.png",
     deployed_url: "https://portfolio-nine-beta-74.vercel.app/",
     github_url: "https://github.com/xwaynex/port.git",
-    category: ["next", "typescript"],
+    category: ["next.js", "typescript"],
     key_tech: ["React", "Tailwind", "Framer motion"],
   },
   {
@@ -204,7 +240,7 @@ export const projects: iProject[] = [
     image_path: "/images/x.png",
     deployed_url: "https://x-clone-three-tau.vercel.app/",
     github_url: "https://github.com/xwaynex/x-clone",
-    category: ["typescript", "next"],
+    category: ["typescript", "next.js"],
     key_tech: ["Tailwind", "Firebase", "Emoji-mart", "Cloudinary"],
   },
 ];
