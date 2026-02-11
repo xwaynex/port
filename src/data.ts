@@ -139,7 +139,7 @@ export const tools: iSkill[] = [
 export const projects: iProject[] = [
   {
     id: 7,
-    name: "adept.ml",
+    name: "Adept.ml",
     description:
     "Adept.ml automates your calls, WhatsApp messages, and quoting process, so you can focus on what you do best.",
     image_path: "/images/adeptML.png",
@@ -167,7 +167,7 @@ export const projects: iProject[] = [
    deployed_url: "https://e-learn-web.vercel.app/",
    github_url: "https://github.com/xwaynex/e-learn.git",
    category: [ "ai", "next.js", "typescript", "nestJs"],
-   key_tech: ["NestJs", "Prisma", "Supabase", "Clerk", "Vapi"],
+   key_tech: ["NestJs", "Prisma", "Supabase", "Clerk", "Vapi", "Next.js"],
  },
   {
     id: 1,
