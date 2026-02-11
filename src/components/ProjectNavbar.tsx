@@ -24,8 +24,9 @@ const ProjectNavbar: React.FC<{handleFilterCategory:  (category: Category | "all
     <div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
       <NavItem value="all" {...props} />
       <NavItem value="react" {...props} />
-      <NavItem value="next" {...props} />
+      <NavItem value="next.js" {...props} />
       <NavItem value="express" {...props} />
+      <NavItem value="nestJs" {...props} />
       <NavItem value="typescript" {...props} />
       <NavItem value="mongo" {...props} />
       <NavItem value="ai" {...props} />
