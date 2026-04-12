@@ -1,140 +1,147 @@
 import { RiComputerLine } from "react-icons/ri";
 import { iProject, iService, iSkill } from "./type";
-import { FaServer } from "react-icons/fa";
-import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
+import {FaCloud, FaNodeJs, FaAws } from "react-icons/fa";
+import { AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
 import { BsCCircleFill } from "react-icons/bs";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiHtml5,
+  SiNestjs,
+  SiPython,
+  SiRust,
+  SiSolidity,
+  SiEthereum,
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+  SiSupabase,
+  SiFirebase,
+  SiDocker,
+  SiKubernetes,
+  SiShopify,
+  SiWordpress,
+  SiGit,
+  SiPrisma,
+  SiGithub,
+} from "react-icons/si";
 
 export const service: iService[] = [
   {
     Icon: RiComputerLine,
-    title: "Frontend Development",
+    title: "Full-Stack Engineering",
     about:
-      " dynamic, responsive, and intuitive user interfaces using modern JavaScript frameworks.",
+      "End-to-end product development — from pixel-perfect UIs in <b>React</b> & <b>Next.js</b> to resilient <b>Node</b> backends, typed throughout with <b>TypeScript</b>.",
+    tags: ["React", "Next.js", "TypeScript", "NestJS", "Express"],
   },
   {
-    Icon: FaServer,
-    title: "Backend Development",
+    Icon: SiEthereum,
+    title: "Web3 & Blockchain",
     about:
-      "<b>Robust </b>, <b>scalable</b> backend systems that power high-performance applications and ensuring secure data management.",
+      "Smart contract development in <b>Solidity</b> & <b>Rust</b>, on-chain program design with <b>Anchor</b>, and dApp integration via <b>Ethers.js</b> and Hardhat/Foundry test suites.",
+    tags: ["Solidity", "Rust", "Anchor", "Ethers.js", "Hardhat"],
   },
   {
-    Icon: AiOutlineApi,
-    title: "API Development",
+    Icon: SiShopify,
+    title: "Shopify & E-Commerce",
     about:
-      "Design and develop secure, efficient, and <b>well-documented</b> APIs that enable seamless integration between various systems.",
+      "Custom <b>Liquid</b> theme architecture (Dawn/Slate), high-converting funnels with GemPages & PageFly, AOV optimisation, and private app development via the Shopify API.",
+    tags: ["Liquid", "Dawn/Slate", "GemPages", "Shopify Flow", "PHP/WP"],
   },
   {
     Icon: MdDeveloperMode,
-    title: "Competitive Coding",
+    title: "AI & Workflow Automation",
     about:
-      "Thrive on the challenge of competitive coding—constantly refining my problem-solving skills, on <b>leetcode</b>, <b>hackerrank</b>...",
+      "Agentic CLI workflows with <b>Claude Code</b> & <b>Gemini CLI</b>, shell-integrated code generation, automated documentation, and prompt-engineered unit test pipelines.",
+    tags: ["Claude Code", "Gemini CLI", "Copilot CLI", "Prompt Eng."],
   },
   {
-    Icon: AiOutlineAntDesign,
-    title: "Product Management",
+    Icon: FaCloud,
+    title: "Cloud & DevOps",
     about:
-      "Merging technical expertise with strategic vision, Guiding products from concept to launch. I ensure that every solution not only meets market demands.",
+      "Containerised deployments with <b>Docker</b> & <b>Kubernetes</b>, serverless functions on <b>AWS Lambda</b>, S3 asset pipelines, and EC2 infrastructure management.",
+    tags: ["AWS", "Docker", "Kubernetes", "EC2", "S3 / Lambda"],
+  },
+  {
+    Icon: AiOutlineApi,
+    title: "API & System Design",
+    about:
+      "Design of <b>REST</b> and <b>GraphQL</b> APIs backed by PostgreSQL, MongoDB, or Supabase, with Prisma ORM, performance profiling, and Core Web Vitals optimisation.",
+    tags: ["REST", "GraphQL", "Prisma", "Supabase", "PostgreSQL"],
   },
 ];
 
-export const languages: iSkill[] = [
-  {
-    Icon: BsCCircleFill,
-    name: "Java Script",
-    level: "90%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Type Script",
-    level: "80%",
-  },
-
-  {
-    Icon: BsCCircleFill,
-    name: "Rust",
-    level: "50%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Solidity",
-    level: "50%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "React",
-    level: "80%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "React Native",
-    level: "70%",
-  },
-
-  {
-    Icon: BsCCircleFill,
-    name: "Next.Js",
-    level: "70%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Express",
-    level: "70%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Nestjs",
-    level: "70%",
-  },
+export const frontendSkills: iSkill[] = [
+  { Icon: SiJavascript, name: "JavaScript", level: "90%" },
+  { Icon: SiTypescript, name: "TypeScript", level: "85%" },
+  { Icon: SiReact, name: "React.js", level: "90%" },
+  { Icon: SiNextdotjs, name: "Next.js", level: "80%" },
+  { Icon: SiReact, name: "React Native", level: "75%" },
+  { Icon: SiTailwindcss, name: "Tailwind CSS", level: "90%" },
+  { Icon: SiHtml5, name: "HTML / CSS", level: "95%" },
 ];
 
-export const tools: iSkill[] = [
-  {
-    Icon: BsCCircleFill,
-    name: "Aws",
-    level: "60%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Docker",
-    level: "70%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Kubarneries",
-    level: "70%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "MongoDb",
-    level: "80%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Mysql",
-    level: "60%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Prisma",
-    level: "70%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Supabase",
-    level: "70%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Firebase",
-    level: "80%",
-  },
-  {
-    Icon: BsCCircleFill,
-    name: "Sentry",
-    level: "80%",
-  },
+export const backendSkills: iSkill[] = [
+  { Icon: FaNodeJs, name: "Express.js", level: "80%" },
+  { Icon: SiNestjs, name: "NestJS", level: "75%" },
+  { Icon: SiPython, name: "Python", level: "70%" },
 ];
+
+export const web3Skills: iSkill[] = [
+  { Icon: SiSolidity, name: "Solidity", level: "65%" },
+  { Icon: SiRust, name: "Rust", level: "60%" },
+  { Icon: SiRust, name: "Anchor / Cargo", level: "55%" },
+  { Icon: SiEthereum, name: "Ethers.js", level: "65%" },
+  { Icon: BsCCircleFill, name: "Hardhat / Foundry", level: "60%" },
+  { Icon: BsCCircleFill, name: "Infura / Alchemy", level: "65%" },
+];
+
+export const databaseSkills: iSkill[] = [
+  { Icon: SiMongodb, name: "MongoDB", level: "80%" },
+  { Icon: SiMysql, name: "MySQL", level: "70%" },
+  { Icon: SiPostgresql, name: "PostgreSQL", level: "70%" },
+  { Icon: SiSupabase, name: "Supabase", level: "75%" },
+  { Icon: SiFirebase, name: "Firebase", level: "80%" },
+  { Icon: SiPrisma, name: "Prisma ORM", level: "75%" },
+];
+
+export const cloudSkills: iSkill[] = [
+  { Icon: FaAws, name: "AWS (EC2, S3, Lambda)", level: "65%" },
+  { Icon: SiDocker, name: "Docker", level: "75%" },
+  { Icon: SiKubernetes, name: "Kubernetes", level: "65%" },
+  { Icon: SiGit, name: "Git / GitHub", level: "90%" },
+];
+
+export const shopifySkills: iSkill[] = [
+  { Icon: SiShopify, name: "Shopify Liquid", level: "85%" },
+  { Icon: SiShopify, name: "Custom Theme Dev (Dawn/Slate)", level: "80%" },
+  { Icon: SiShopify, name: "GemPages / PageFly", level: "80%" },
+  { Icon: SiShopify, name: "Shopify Flow & App APIs", level: "75%" },
+  { Icon: SiWordpress, name: "WordPress (PHP)", level: "75%" },
+];
+
+export const aiWorkflowSkills: iSkill[] = [
+  { Icon: BsCCircleFill, name: "Claude Code (Agentic)", level: "90%" },
+  { Icon: BsCCircleFill, name: "Gemini CLI", level: "80%" },
+  { Icon: SiGithub, name: "GitHub Copilot CLI", level: "80%" },
+  { Icon: BsCCircleFill, name: "Prompt Engineering", level: "85%" },
+  { Icon: BsCCircleFill, name: "CLI Piping & Automation", level: "80%" },
+];
+
+export const testingSkills: iSkill[] = [
+  { Icon: BsCCircleFill, name: "Mocha / Chai", level: "75%" },
+  { Icon: BsCCircleFill, name: "Integration Testing", level: "70%" },
+  { Icon: BsCCircleFill, name: "Google PageSpeed Insights", level: "80%" },
+  { Icon: BsCCircleFill, name: "Core Web Vitals / SEO", level: "80%" },
+];
+
+// Legacy exports retained for compatibility
+export const languages = frontendSkills;
+export const tools = cloudSkills;
 
 export const projects: iProject[] = [
   {
