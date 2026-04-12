@@ -4,6 +4,7 @@ export interface iService {
   title: string
   about: string
   Icon: IconType
+  tags?: string[]
 }
 
 export interface iSkill {

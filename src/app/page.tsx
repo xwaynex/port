@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="grid grid-cols-12 gap-6 my-14 px-5 lg:px-48 sm:px:20 md:px-32 ">
+      <div className="grid grid-cols-12 gap-6 my-14 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 overflow-x-hidden">
         <div className="col-span-12 bg-white dark:bg-dark-500 lg:col-span-4 rounded-2xl p-4 text-center shadow-custom-light dark:shadow-custom-dark">
           <Sidebar />
         </div>
