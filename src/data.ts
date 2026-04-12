@@ -1,6 +1,6 @@
 import { RiComputerLine } from "react-icons/ri";
 import { iProject, iService, iSkill } from "./type";
-import { FaServer, FaCloud, FaNodeJs, FaAws } from "react-icons/fa";
+import {FaCloud, FaNodeJs, FaAws } from "react-icons/fa";
 import { AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
 import { BsCCircleFill } from "react-icons/bs";
