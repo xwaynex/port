@@ -12,21 +12,36 @@ const Storm = () => {
   const boltGlowRef = useRef<SVGPathElement>(null);
   const stormTimer = useRef<NodeJS.Timeout | null>(null);
 
+  const isSoundEnabled = useRef(false);
+
   useEffect(() => {
+    const handleThunderToggle = (e: Event) => {
+      const customEvent = e as CustomEvent<boolean>;
+      isSoundEnabled.current = customEvent.detail;
+    };
+
+    window.addEventListener("thunderToggle", handleThunderToggle);
+
     // Check for reduced motion preference
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reducedMotion) return;
 
-    const flicker = (el: HTMLElement | SVGElement, opacity: number, duration: number) => {
+    const flicker = (
+      el: HTMLElement | SVGElement,
+      opacity: number,
+      duration: number,
+    ) => {
       // Use Web Animations API for temporary visual states (avoids React re-renders)
       el.animate(
         [
           { opacity: 0 },
           { opacity, offset: 0.1 },
           { opacity: 0, offset: 0.8 },
-          { opacity: 0 }
+          { opacity: 0 },
         ],
-        { duration, easing: "ease-out" }
+        { duration, easing: "ease-out" },
       );
     };
 
@@ -46,10 +61,11 @@ const Storm = () => {
     };
 
     const playThunder = (power: number) => {
-      // Browsers require user interaction before playing audio. 
+      // Browsers require user interaction before playing audio.
       // This is a basic Web Audio API synth for a thunder rumble.
       try {
-        const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+        const AudioContext =
+          window.AudioContext || (window as any).webkitAudioContext;
         if (!AudioContext) return;
         const ctx = new AudioContext();
         if (ctx.state === "suspended") return; // Audio blocked until user clicks somewhere
@@ -83,19 +99,31 @@ const Storm = () => {
     };
 
     const strike = () => {
-      if (!flashRef.current || !boltRef.current || !boltPathRef.current || !boltGlowRef.current) return;
+      if (
+        !flashRef.current ||
+        !boltRef.current ||
+        !boltPathRef.current ||
+        !boltGlowRef.current
+      )
+        return;
 
-      const heavy = Math.random() < 0.55; 
+      const heavy = Math.random() < 0.55;
       const power = heavy ? 1 : 0.55 + Math.random() * 0.25;
 
       if (heavy) {
         const b = makeBolt();
         boltPathRef.current.setAttribute("d", b.d);
         boltGlowRef.current.setAttribute("d", b.d);
-        flashRef.current.style.setProperty("--bx", `${(b.x * 100).toFixed(0)}%`);
+        flashRef.current.style.setProperty(
+          "--bx",
+          `${(b.x * 100).toFixed(0)}%`,
+        );
         flicker(boltRef.current, 1, 190);
       } else {
-        flashRef.current.style.setProperty("--bx", `${(15 + Math.random() * 70).toFixed(0)}%`);
+        flashRef.current.style.setProperty(
+          "--bx",
+          `${(15 + Math.random() * 70).toFixed(0)}%`,
+        );
       }
 
       flicker(flashRef.current, heavy ? 0.9 : 0.42, heavy ? 380 : 300);
@@ -109,7 +137,14 @@ const Storm = () => {
         }, STRIKE_GAP * i);
       }
 
-      setTimeout(() => playThunder(power), heavy ? 260 : 620);
+      setTimeout(
+        () => {
+          if (isSoundEnabled.current) {
+            playThunder(power);
+          }
+        },
+        heavy ? 260 : 620,
+      );
 
       const [lo, hi] = STRIKE_EVERY;
       stormTimer.current = setTimeout(strike, lo + Math.random() * (hi - lo));
@@ -121,6 +156,7 @@ const Storm = () => {
     // Cleanup interval on unmount
     return () => {
       if (stormTimer.current) clearTimeout(stormTimer.current);
+      window.removeEventListener("thunderToggle", handleThunderToggle);
     };
   }, []);
 
