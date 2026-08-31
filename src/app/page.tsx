@@ -9,6 +9,7 @@ import About from "@/components/About";
 import { AnimatePresence, motion } from "framer-motion";
 import { tabAnimation } from "@/animations";
 import Footer from "@/components/Footer";
+import Storm from "@/components/Storm";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<string>("About");
@@ -22,6 +23,7 @@ export default function Home() {
         <div className="flex flex-col col-span-12 bg-white dark:bg-dark-500  lg:col-span-8 rounded-2xl shadow-custom-light dark:shadow-custom-dark overflow-hidden">
           {" "}
           <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+          <Storm />
           {/* Render components based on the active tab */}
           <div className="relative flex-grrow h-full">
             <AnimatePresence mode="wait">

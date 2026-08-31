@@ -31,3 +31,19 @@ body {
   width: 8px;
   height: 0px
 }
+
+/* ═══ STORM ═══ */
+.storm{position:fixed;inset:0;z-index:380;pointer-events:none}
+.storm__flash{
+  position:absolute;inset:0;opacity:0;
+  background:
+    radial-gradient(ellipse 90% 60% at var(--bx,50%) -12%,rgba(198,228,255,.92),rgba(150,190,235,.28) 42%,transparent 72%),
+    linear-gradient(180deg,rgba(210,232,255,.5),transparent 58%);
+  mix-blend-mode:screen;
+  will-change:opacity;
+}
+.storm__bolt{
+  position:absolute;inset:0;width:100%;height:100%;opacity:0;
+  filter:drop-shadow(0 0 14px rgba(180,220,255,.95)) drop-shadow(0 0 42px rgba(120,180,255,.6));
+  mix-blend-mode:screen;will-change:opacity;
+}
