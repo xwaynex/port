@@ -62,3 +62,62 @@ body {
   border-color:var(--blood-hot);color:var(--blood-hot);
   background:rgba(192,18,31,.12);
 }
+
+
+/* ═══════════ ACT II — EYES ═══════════ */
+.eyes{height:260vh;position:relative;background:#000}
+.eyes__sticky{
+  position:sticky;top:0;height:100vh;width:100%;
+  overflow:hidden;display:grid;place-items:center;
+}
+/* deliberately static — only the frame changes, never the framing */
+#eyeCanvas{
+  position:absolute;top:50%;left:50%;
+  width:100%;height:100%;
+  transform:translate(-50%,-50%);
+  filter:contrast(1.1) saturate(1.15);
+}
+.eyes__flare{
+  position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle 300px at var(--mx,50%) var(--my,50%),
+             rgba(255,43,43,.16),transparent 70%);
+  mix-blend-mode:screen;
+}
+.eyes__frame{
+  position:absolute;pointer-events:none;
+  top:clamp(4.6rem,9vh,6.4rem);bottom:clamp(2.6rem,6vh,4rem);
+  left:clamp(2.6rem,5vw,4.2rem);right:clamp(2.6rem,5vw,4.2rem);
+}
+.eyes__frame::before,.eyes__frame::after{
+  content:'';position:absolute;width:46px;height:46px;
+  border:1px solid rgba(255,43,43,.5);
+}
+.eyes__frame::before{top:0;left:0;border-right:0;border-bottom:0}
+.eyes__frame::after{bottom:0;right:0;border-left:0;border-top:0}
+.eyes__label{
+  position:absolute;font-family:var(--mono);
+  font-size:.58rem;letter-spacing:.28em;color:rgba(232,228,220,.55);
+}
+.eyes__label--tl{top:-.4rem;left:3.6rem;font-family:var(--serif);letter-spacing:.4em;color:var(--blood-hot)}
+.eyes__label--tr{top:-.4rem;right:3.6rem}
+.eyes__label--bl{bottom:-.4rem;left:3.6rem;color:var(--blood-hot)}
+.eyes__label--br{bottom:-.4rem;right:3.6rem}
+.eyes__copy{
+  position:relative;z-index:3;text-align:center;
+  transform:translateY(26vh);
+  text-shadow:0 2px 40px rgba(0,0,0,.95),0 0 12px rgba(0,0,0,.85);
+}
+.eyes__copy h2{
+  font-family:var(--serif);font-weight:800;
+  font-size:clamp(2.4rem,6.5vw,5rem);letter-spacing:.12em;
+}
+.eyes__copy h2 span{color:var(--blood-hot)}
+.eyes__copy p{
+  font-family:var(--serif);font-size:.82rem;letter-spacing:.16em;
+  color:rgba(232,228,220,.6);margin-top:1rem;
+}
+.eyes__note{
+  font-family:var(--mono)!important;font-size:.54rem!important;
+  letter-spacing:.28em!important;color:rgba(232,228,220,.3)!important;
+  margin-top:.7rem!important;
+}
