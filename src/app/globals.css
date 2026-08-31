@@ -47,3 +47,18 @@ body {
   filter:drop-shadow(0 0 14px rgba(180,220,255,.95)) drop-shadow(0 0 42px rgba(120,180,255,.6));
   mix-blend-mode:screen;will-change:opacity;
 }
+
+.chrome__sound{
+  display:flex;align-items:center;gap:.45rem;cursor:pointer;
+  background:none;border:1px solid rgba(232,228,220,.22);
+  padding:.3rem .6rem;color:var(--bone);
+  font-family:var(--mono);font-size:.56rem;letter-spacing:.28em;
+  transition:border-color .35s,color .35s,background .35s;
+  border-radius:50px;user-select:none
+}
+.chrome__sound-jp{font-family:var(--serif);letter-spacing:0;font-size:.72rem}
+.chrome__sound:hover{border-color:rgba(255,43,43,.7)}
+.chrome__sound[aria-pressed="true"]{
+  border-color:var(--blood-hot);color:var(--blood-hot);
+  background:rgba(192,18,31,.12);
+}
