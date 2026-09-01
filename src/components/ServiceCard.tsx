@@ -6,7 +6,7 @@ const ServiceCard: React.FC<{ service: iService }> = ({
   return (
     <div className="group flex flex-col h-full rounded-xl border border-gray-200 dark:border-dark-200 bg-white dark:bg-dark-500 overflow-hidden transition-all duration-300 hover:border-green dark:hover:border-green hover:shadow-custom-light">
       {/* Header */}
-      <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-green to-end">
+      <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-green to-end/20">
         <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
           <Icon className="text-white text-lg" />
         </div>

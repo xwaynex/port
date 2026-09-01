@@ -11,9 +11,7 @@ const About = () => {
         reflection of how we reason, create, and solve. As a Full-Stack Developer and emerging Tech
         Leader with 4+ years of experience, I build and architect systems that not only perform, but
         think. My passion lies in designing frameworks that scale effortlessly, writing clean,
-        purposeful code, and exploring how AI can reshape the way we develop. Guided by curiosity in
-        philosophy moral, ethical, and ontological I bring reflection into engineering: every
-        decision in design and architecture is intentional, every solution tied to meaning.
+        purposeful code, and exploring how AI can reshape the way we develop. Guided by curiosity behavioral psychology and social dynamics  I bring reflection into engineering: every decision in design and architecture is intentional, every solution tied to meaning.
       </h5>
 
       <div
