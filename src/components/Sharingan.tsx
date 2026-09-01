@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 /* ═══════════════ CONSTANTS & UTILS ═══════════════ */
-const MAIN_COUNT = 71;
+// const MAIN_COUNT = 71;
 const EYE_COUNT = 51;
 const MINIMUM_LOAD_DURATION_MS = 1200; // Ensures the preloader doesn't flash too fast on cached loads
 
@@ -15,14 +15,14 @@ const clamp = (val: number, min: number, max: number) =>
   Math.max(min, Math.min(max, val));
 
 /* fade in over [a,b], hold, fade out over [c,d] */
-const window4 = (p: number, a: number, b: number, c: number, d: number) =>
-  p < a || p > d
-    ? 0
-    : p < b
-      ? (p - a) / (b - a)
-      : p > c
-        ? 1 - (p - c) / (d - c)
-        : 1;
+// const window4 = (p: number, a: number, b: number, c: number, d: number) =>
+//   p < a || p > d
+//     ? 0
+//     : p < b
+//       ? (p - a) / (b - a)
+//       : p > c
+//         ? 1 - (p - c) / (d - c)
+//         : 1;
 
 const GAZE_LUT = [
   { f: 5, cx: 613.4 }, // far left
