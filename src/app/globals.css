@@ -222,3 +222,25 @@ body {
   color: rgba(232, 228, 220, 0.3) !important;
   margin-top: 0.7rem !important;
 }
+
+
+/* ── scrollbar ── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#000}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--blood),#3a0409)}
+
+/* ═══ PRELOADER ═══ */
+.loader{
+  position:fixed;inset:0;z-index:999;
+  background:var(--ink);
+  display:grid;place-items:center;
+  transition:opacity .9s var(--ease), visibility .9s;
+}
+.loader.done{opacity:0;visibility:hidden}
+.loader__inner{width:min(420px,72vw);text-align:center}
+.loader__glyph{
+  font-family:var(--serif);font-size:clamp(3rem,9vw,5.5rem);
+  letter-spacing:.22em;color:var(--bone);
+  text-shadow:0 0 40px rgba(255,43,43,.35);
+  animation:pulseGlyph 2.4s ease-in-out infinite;
+}

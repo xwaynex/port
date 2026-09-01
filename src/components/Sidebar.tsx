@@ -14,12 +14,19 @@ import { useEffect, useState } from "react";
 
 const container = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.09, delayChildren: 0.1 } },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.09, delayChildren: 0.1 },
+  },
 };
 
 const item = {
   hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 120, damping: 14 } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 120, damping: 14 },
+  },
 };
 
 const Sidebar = () => {
@@ -27,6 +34,28 @@ const Sidebar = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   const changeTheme = () => setTheme(theme === "light" ? "dark" : "light");
+
+  // 1. Introduce React state for the sound toggle
+  const [thunderOn, setThunderOn] = useState(false);
+
+  // 2. Update the handler
+  const handleSoundToggle = async () => {
+    const newState = !thunderOn;
+    setThunderOn(newState);
+
+    // Broadcast the state change to the window so Storm.tsx can hear it
+    window.dispatchEvent(
+      new CustomEvent("thunderToggle", { detail: newState }),
+    );
+
+    if (newState) {
+      // Optional: If you have an external audio setup, initialize/resume it here.
+      // If `playThunder` is defined globally, you can play a test clap:
+      // const ctx = initAudio();
+      // if (ctx && ctx.state === "suspended") await ctx.resume();
+      // playThunder(0.7);
+    }
+  };
 
   return (
     <motion.div
@@ -69,13 +98,34 @@ const Sidebar = () => {
       >
         <MdOutlineEngineering className="text-green text-base shrink-0" />
         <span className="font-medium">Software Engineer</span>
+        {/* 3. Attach state and onClick handler directly to the button */}
+        <button
+          className="chrome__sound ml-2 flex items-center gap-1"
+          type="button"
+          aria-pressed={thunderOn}
+          title="雷鳴 / thunder audio"
+          onClick={handleSoundToggle}
+        >
+          <span className="chrome__sound-jp font-bold">音</span>
+          <span className="chrome__sound-state text-xs">
+            {thunderOn ? "ON" : "OFF"}
+          </span>
+        </button>
       </motion.div>
 
       {/* Social icons */}
       <motion.div variants={item} className="flex gap-3">
         {[
-          { href: "https://github.com/xwaynex", Icon: FaGithub, label: "GitHub" },
-          { href: "https://www.linkedin.com/in/victor-ogunbiyi1/", Icon: FaLinkedin, label: "LinkedIn" },
+          {
+            href: "https://github.com/xwaynex",
+            Icon: FaGithub,
+            label: "GitHub",
+          },
+          {
+            href: "https://www.linkedin.com/in/victor-ogunbiyi1/",
+            Icon: FaLinkedin,
+            label: "LinkedIn",
+          },
         ].map(({ href, Icon, label }) => (
           <a
             key={label}
@@ -87,11 +137,15 @@ const Sidebar = () => {
           >
             <Icon className="text-lg" />
           </a>
+          
         ))}
       </motion.div>
 
       {/* Divider */}
-      <motion.div variants={item} className="w-full h-px bg-gray-200 dark:bg-dark-200" />
+      <motion.div
+        variants={item}
+        className="w-full h-px bg-gray-200 dark:bg-dark-200"
+      />
 
       {/* Info strip */}
       <motion.div
@@ -105,7 +159,9 @@ const Sidebar = () => {
         <div className="h-px bg-gray-200 dark:bg-dark-500" />
         <div className="flex items-center gap-2.5 px-4 py-2.5">
           <CiPhone className="text-green text-base shrink-0" />
-          <span className="text-gray-600 dark:text-gray-400">+234-816-178-9508</span>
+          <span className="text-gray-600 dark:text-gray-400">
+            +234-816-178-9508
+          </span>
         </div>
       </motion.div>
 
@@ -115,7 +171,7 @@ const Sidebar = () => {
           href="https://docs.google.com/document/d/1x08uYyvXvnb7nP6n9FNTWLKNfgMbZ_epqkBjwzK39Zg/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 py-2.5 rounded-full bg-gradient-to-r from-green to-end text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+          className="flex items-center justify-center gap-2 py-2.5 rounded-full bg-gradient-to-r from-green to-end/20 text-white text-sm font-semibold hover:opacity-90 transition-opacity"
         >
           <GiTie className="text-base" />
           View Resume
@@ -139,7 +195,11 @@ const Sidebar = () => {
           ) : (
             <MdDarkMode className="text-green text-base" />
           )}
-          {mounted ? (theme === "dark" ? "Light Mode" : "Dark Mode") : "Toggle Theme"}
+          {mounted
+            ? theme === "dark"
+              ? "Light Mode"
+              : "Dark Mode"
+            : "Toggle Theme"}
         </button>
       </motion.div>
     </motion.div>
