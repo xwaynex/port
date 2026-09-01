@@ -27,11 +27,11 @@ export default function Home() {
       <div className="relative z-10 flex flex-col min-h-screen">
         <div className="grid grid-cols-12 gap-6 my-14 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 overflow-x-hidden">
           {/* SIDEBAR CARD: Added /85 opacity to backgrounds and a backdrop-blur */}
-          <div className="col-span-12 bg-white/15 dark:bg-dark-500/15 backdrop-blur-md lg:col-span-4 rounded-2xl p-4 text-center shadow-custom-light dark:shadow-custom-dark">
+          <div className="col-span-12 bg-white/55 dark:bg-dark-500/15 backdrop-blur-md lg:col-span-4 rounded-2xl p-4 text-center shadow-custom-light dark:shadow-custom-dark">
             <Sidebar />
           </div>
 
-          <div className="flex flex-col col-span-12 bg-white/15 dark:bg-dark-500/15 backdrop-blur-md lg:col-span-8 rounded-2xl shadow-custom-light dark:shadow-custom-dark overflow-hidden">
+          <div className="flex flex-col col-span-12 bg-white/55 dark:bg-dark-500/15 backdrop-blur-md lg:col-span-8 rounded-2xl shadow-custom-light dark:shadow-custom-dark overflow-hidden">
             <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
             {/* Render components based on the active tab */}
