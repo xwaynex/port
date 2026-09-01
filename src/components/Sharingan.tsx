@@ -47,7 +47,10 @@ const drawCover = (
   if (!img || !img.complete || img.naturalWidth === 0) return false;
   const imgRatio = img.naturalWidth / img.naturalHeight;
   const ctxRatio = cw / ch;
-  let w, h, x, y;
+
+  // 1. Declare w and h as 'let' because they are assigned inside the if/else block
+  let w: number;
+  let h: number;
 
   if (ctxRatio > imgRatio) {
     w = cw * zoom;
@@ -56,8 +59,10 @@ const drawCover = (
     h = ch * zoom;
     w = ch * imgRatio * zoom;
   }
-  x = (cw - w) / 2;
-  y = (ch - h) / 2;
+
+  // 2. Declare x and y as 'const' exactly where you calculate them
+  const x = (cw - w) / 2;
+  const y = (ch - h) / 2;
 
   ctx.drawImage(img, x, y, w, h);
   return true;
