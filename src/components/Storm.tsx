@@ -5,6 +5,12 @@ import React, { useEffect, useRef } from "react";
 const STRIKE_GAP = 500; // ms between flickers within a strike
 const STRIKE_EVERY = [3200, 7000]; // ms between strikes (random in range)
 
+declare global {
+  interface Window {
+    webkitAudioContext?: typeof AudioContext;
+  }
+}
+
 const Storm = () => {
   const flashRef = useRef<HTMLDivElement>(null);
   const boltRef = useRef<SVGSVGElement>(null);
@@ -64,8 +70,8 @@ const Storm = () => {
       // Browsers require user interaction before playing audio.
       // This is a basic Web Audio API synth for a thunder rumble.
       try {
-        const AudioContext =
-          window.AudioContext || (window as any).webkitAudioContext;
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+
         if (!AudioContext) return;
         const ctx = new AudioContext();
         if (ctx.state === "suspended") return; // Audio blocked until user clicks somewhere
@@ -95,6 +101,7 @@ const Storm = () => {
         noise.start();
       } catch (e) {
         // Silently fail if audio API is unsupported/blocked
+        console.warn("Thunder audio failed to play:", e);
       }
     };
 
